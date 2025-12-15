@@ -37,6 +37,7 @@ export default function Home() {
             { name: "Contact", id: "contact" },
           ]}
           brandName="Webild"
+          button={{ text: "Get Started", href: "#contact" }}
         />
       </div>
 
