@@ -1,6 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from "@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay";
 import HeroBillboardCarouselSplit from "@/components/sections/hero/HeroBillboardCarouselSplit";
 import MediaSplitTabsAbout from "@/components/sections/about/MediaSplitTabsAbout";
@@ -28,15 +28,17 @@ export default function Home() {
       secondaryButtonStyle="glass"
       headingFontWeight="bold"
     >
-      <NavbarLayoutFloatingOverlay
-        navItems={[
-          { name: "About", id: "about" },
-          { name: "Services", id: "services" },
-          { name: "Team", id: "team" },
-          { name: "Contact", id: "contact" },
-        ]}
-        brandName="Webild"
-      />
+      <div id="nav" data-section="nav">
+        <NavbarLayoutFloatingOverlay
+          navItems={[
+            { name: "About", id: "about" },
+            { name: "Services", id: "services" },
+            { name: "Team", id: "team" },
+            { name: "Contact", id: "contact" },
+          ]}
+          brandName="Webild"
+        />
+      </div>
 
       <div id="hero" data-section="hero">
         <HeroBillboardCarouselSplit
