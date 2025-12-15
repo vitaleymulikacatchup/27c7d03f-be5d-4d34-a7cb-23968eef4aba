@@ -44,7 +44,6 @@ export default function Home() {
       <div id="hero" data-section="hero">
         <HeroBillboardCarouselSplit
           title="Welcome to Webild"
-          description="Build amazing web experiences with our platform"
           buttons={[
             { text: "Get Started", href: "#contact" },
             { text: "Learn More", href: "#about" },
