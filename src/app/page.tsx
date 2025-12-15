@@ -6,7 +6,7 @@ import HeroBillboardCarouselSplit from "@/components/sections/hero/HeroBillboard
 import MediaSplitTabsAbout from "@/components/sections/about/MediaSplitTabsAbout";
 import FeatureCardFour from "@/components/sections/feature/FeatureCardFour";
 import MetricCardOne from "@/components/sections/metrics/MetricCardOne";
-import TeamCardNine from "@/components/sections/team/TeamCardNine";
+import TeamCardEleven from "@/components/sections/team/TeamCardEleven";
 import TestimonialCardFive from "@/components/sections/testimonial/TestimonialCardFive";
 import SocialProofOne from "@/components/sections/socialProof/SocialProofOne";
 import BlogCardFour from "@/components/sections/blog/BlogCardFour";
@@ -47,6 +47,11 @@ export default function Home() {
           buttons={[
             { text: "Get Started", href: "#contact" },
             { text: "Learn More", href: "#about" },
+          ]}
+          mediaItems={[
+            { imageSrc: "/images/noise.webp", imageAlt: "Webild Hero Image 1" },
+            { imageSrc: "/images/noise.webp", imageAlt: "Webild Hero Image 2" },
+            { imageSrc: "/images/noise.webp", imageAlt: "Webild Hero Image 3" },
           ]}
         />
       </div>
@@ -115,35 +120,53 @@ export default function Home() {
       </div>
 
       <div id="team" data-section="team">
-        <TeamCardNine
-          title="Meet Our Team"
-          description="The talented people behind our success"
-          teamMembers={[
+        <TeamCardEleven
+          groups={[
             {
-              id: "1",
-              name: "John Doe",
-              role: "CEO",
-              imageSrc: "/images/noise.webp",
+              id: "leadership",
+              groupTitle: "Leadership",
+              members: [
+                {
+                  id: "1",
+                  title: "John Doe",
+                  subtitle: "CEO",
+                  detail: "john@webild.com",
+                  imageSrc: "/images/noise.webp",
+                },
+                {
+                  id: "2",
+                  title: "Jane Smith",
+                  subtitle: "CTO",
+                  detail: "jane@webild.com",
+                  imageSrc: "/images/noise.webp",
+                },
+              ],
             },
             {
-              id: "2",
-              name: "Jane Smith",
-              role: "CTO",
-              imageSrc: "/images/noise.webp",
-            },
-            {
-              id: "3",
-              name: "Sarah Johnson",
-              role: "Lead Designer",
-              imageSrc: "/images/noise.webp",
-            },
-            {
-              id: "4",
-              name: "Mike Brown",
-              role: "UI Designer",
-              imageSrc: "/images/noise.webp",
+              id: "design",
+              groupTitle: "Design Team",
+              members: [
+                {
+                  id: "3",
+                  title: "Sarah Johnson",
+                  subtitle: "Lead Designer",
+                  detail: "sarah@webild.com",
+                  imageSrc: "/images/noise.webp",
+                },
+                {
+                  id: "4",
+                  title: "Mike Brown",
+                  subtitle: "UI Designer",
+                  detail: "mike@webild.com",
+                  imageSrc: "/images/noise.webp",
+                },
+              ],
             },
           ]}
+          animationType="slide-up"
+          title="Meet Our Team"
+          description="The talented people behind our success"
+          textboxLayout="default"
           useInvertedBackground="noInvert"
         />
       </div>
