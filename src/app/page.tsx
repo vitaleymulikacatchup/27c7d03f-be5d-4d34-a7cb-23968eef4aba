@@ -6,7 +6,7 @@ import HeroBillboardCarouselSplit from "@/components/sections/hero/HeroBillboard
 import MediaSplitTabsAbout from "@/components/sections/about/MediaSplitTabsAbout";
 import FeatureCardFour from "@/components/sections/feature/FeatureCardFour";
 import MetricCardOne from "@/components/sections/metrics/MetricCardOne";
-import TeamCardEleven from "@/components/sections/team/TeamCardEleven";
+import TeamCardNine from "@/components/sections/team/TeamCardNine";
 import TestimonialCardFive from "@/components/sections/testimonial/TestimonialCardFive";
 import SocialProofOne from "@/components/sections/socialProof/SocialProofOne";
 import BlogCardFour from "@/components/sections/blog/BlogCardFour";
@@ -47,20 +47,6 @@ export default function Home() {
           buttons={[
             { text: "Get Started", href: "#contact" },
             { text: "Learn More", href: "#about" },
-          ]}
-          slides={[
-            {
-              id: "1",
-              title: "Slide 1",
-              description: "First slide description",
-              imageSrc: "/images/noise.webp",
-            },
-            {
-              id: "2",
-              title: "Slide 2",
-              description: "Second slide description",
-              imageSrc: "/images/noise.webp",
-            },
           ]}
         />
       </div>
@@ -129,53 +115,35 @@ export default function Home() {
       </div>
 
       <div id="team" data-section="team">
-        <TeamCardEleven
+        <TeamCardNine
           title="Meet Our Team"
           description="The talented people behind our success"
-          groups={[
+          teamMembers={[
             {
-              id: "leadership",
-              groupTitle: "Leadership",
-              members: [
-                {
-                  id: "1",
-                  title: "John Doe",
-                  subtitle: "CEO",
-                  detail: "john@webild.com",
-                  imageSrc: "/images/noise.webp",
-                },
-                {
-                  id: "2",
-                  title: "Jane Smith",
-                  subtitle: "CTO",
-                  detail: "jane@webild.com",
-                  imageSrc: "/images/noise.webp",
-                },
-              ],
+              id: "1",
+              name: "John Doe",
+              role: "CEO",
+              imageSrc: "/images/noise.webp",
             },
             {
-              id: "design",
-              groupTitle: "Design",
-              members: [
-                {
-                  id: "3",
-                  title: "Sarah Johnson",
-                  subtitle: "Lead Designer",
-                  detail: "sarah@webild.com",
-                  imageSrc: "/images/noise.webp",
-                },
-                {
-                  id: "4",
-                  title: "Mike Brown",
-                  subtitle: "UI Designer",
-                  detail: "mike@webild.com",
-                  imageSrc: "/images/noise.webp",
-                },
-              ],
+              id: "2",
+              name: "Jane Smith",
+              role: "CTO",
+              imageSrc: "/images/noise.webp",
+            },
+            {
+              id: "3",
+              name: "Sarah Johnson",
+              role: "Lead Designer",
+              imageSrc: "/images/noise.webp",
+            },
+            {
+              id: "4",
+              name: "Mike Brown",
+              role: "UI Designer",
+              imageSrc: "/images/noise.webp",
             },
           ]}
-          animationType="slide-up"
-          textboxLayout="default"
           useInvertedBackground="noInvert"
         />
       </div>
